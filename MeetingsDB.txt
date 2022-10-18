@@ -1,0 +1,203 @@
+create database MEETINGS
+CREATE TABLE Logintbl (
+    Username nvarchar(50) PRIMARY KEY NOT NULL,
+    Password nvarchar(50) NOT NULL,
+   );
+
+   INSERT INTO  Logintbl VALUES ('admin','1234')
+   INSERT INTO  Logintbl VALUES ('ash','5678')
+   INSERT INTO  Logintbl VALUES ('jewel','1234')
+   INSERT INTO  Logintbl VALUES ('ashley','5678')
+   
+
+   create table RoomDetails
+   (
+    Id Int PRIMARY KEY,
+	Room_Name nvarchar(50),
+	Category nvarchar(40),
+	);
+   create table BookingDetails
+   (
+    BookingId int PRIMARY KEY,
+     Room_Name nvarchar(50),
+	 Booking_Date Date,
+	 From_Time Time,
+	 To_Time Time,
+	 Team_Name nvarchar(50),
+	 Purpose nvarchar(50),
+   );
+
+   SELECT * FROM Logintbl
+   Select * FROM RoomDetails
+   Select * FROM BookingDetails
+
+   CREATE procedure [dbo].[uspgetallrooms]
+   @Id Int ,
+   @Room_Name nvarchar(50),
+   @Category nvarchar(40)
+AS
+Begin 
+ Select * FROM RoomDetails
+END
+
+CREATE procedure [dbo].[uspgetallbookings]
+    @BookingId int,
+     @Room_Name nvarchar(50),
+	 @Booking_Date Date,
+	 @From_Time Time,
+	 @To_Time Time,
+	 @Team_Name nvarchar(50),
+	 @Purpose nvarchar(50)
+AS
+Begin 
+ Select * FROM BookingDetails
+END
+
+    CREATE procedure [dbo].[uspgetlogintbl]
+   @Username nvarchar(50), 
+   @Password nvarchar(50)
+AS
+Begin 
+ SELECT * FROM Logintbl
+END
+
+
+CREATE PROCEDURE [dbo].[uspInsertUser]
+@Username nvarchar(50),
+@Password nvarchar(50)
+AS
+BEGIN
+INSERT INTO Logintbl VALUES(@Username,@Password)
+END
+
+CREATE PROCEDURE [dbo].[uspInsertRoom]
+@Id Int,
+@Room_Name nvarchar(50),
+@Category nvarchar(40)
+AS
+BEGIN
+INSERT INTO RoomDetails VALUES(@Id ,@Room_Name , @Category)
+END
+
+CREATE PROCEDURE [dbo].[uspAddBooking]
+@BookingId int,
+ @Room_Name nvarchar(50),
+ @Booking_Date Date,
+ @From_Time Time,
+ @To_Time Time,
+ @Team_Name nvarchar(50),
+ @Purpose nvarchar(50)
+AS
+BEGIN
+INSERT INTO BookingDetails VALUES(@BookingId,@Room_Name,@Booking_Date,@From_Time,@To_Time,@Team_Name,@Purpose )
+END
+
+CREATE PROCEDURE [dbo].[uspUpdateUser]
+@Username nvarchar(50),
+@Password nvarchar(50)
+AS
+BEGIN
+UPDATE  Logintbl SET Username= @Username , Password=@Password
+END
+
+CREATE PROCEDURE [dbo].[uspUpdateRoomDetails]
+@Id Int,
+@Room_Name nvarchar(50),
+@Category nvarchar(40)
+AS
+BEGIN
+UPDATE  RoomDetails SET Room_Name= @Room_Name , Category=@Category
+END
+
+CREATE PROCEDURE [dbo].[uspUpdateBookingDetails]
+@BookingId int,
+ @Room_Name nvarchar(50),
+ @Booking_Date Date,
+ @From_Time Time,
+ @To_Time Time,
+ @Team_Name nvarchar(50),
+ @Purpose nvarchar(50)
+AS
+BEGIN
+UPDATE  BookingDetails SET BookingId=@BookingId,
+Room_Name = @Room_Name,
+Booking_Date = @Booking_Date,
+ From_Time = @From_Time,
+ To_Time = @To_Time,
+Team_Name = @Team_Name,
+Purpose = @Purpose
+END
+
+CREATE PROCEDURE [dbo].[uspDeleteRoom]
+@Id Int,
+AS
+BEGIN
+DELETE from RoomDetails where ID = @Id
+END
+
+CREATE PROCEDURE [dbo].[uspDeleteUser]
+@Username nvarchar(40),
+AS
+BEGIN
+DELETE from Logintbl where Username = @Username
+END
+
+CREATE PROCEDURE [dbo].[uspDeleteBooking]
+@BookingId Int,
+AS
+BEGIN
+DELETE from RoomDetails where BookingID = @BookingId
+END
+
+CREATE PROCEDURE [dbo].[uspgetspecificuser]
+@Username nvarchar(40)
+as
+Begin 
+select * from Logintbl where Username=@Username
+END
+
+CREATE PROCEDURE [dbo].[uspgetspecificroomdetails]
+@Id Int
+as
+Begin 
+select * from RoomDetails where Id=@Id
+END
+
+CREATE PROCEDURE [dbo].[uspgetspecificbookingdetails]
+@BookingId Int
+as
+Begin 
+select * from BookingDetails where BookingId = @BookingId
+END
+
+
+
+   INSERT INTO  RoomDetails VALUES (1,'Andromeda','Board Room	')
+   INSERT INTO  RoomDetails VALUES (2,'ODC-5','Training Room')
+   INSERT INTO  RoomDetails VALUES (3,'Winter','3 MR')
+   INSERT INTO  RoomDetails VALUES (4,'Summer','3 MR')
+   INSERT INTO  RoomDetails VALUES (5,'Horizon (VR)','4 MR')
+   INSERT INTO  RoomDetails VALUES (6,'Spring','4 MR')
+   INSERT INTO  RoomDetails VALUES (7,'Tech Hub','6 MR')
+   INSERT INTO  RoomDetails VALUES (8,'Twilight','6 MR')
+   INSERT INTO  RoomDetails VALUES (9,'Sunrise','8 MR')
+   INSERT INTO  RoomDetails VALUES (10,'Sunset','8 MR')
+   INSERT INTO  RoomDetails VALUES (11,'.Net','PB')
+   INSERT INTO  RoomDetails VALUES (12,'Summer','PB')
+   INSERT INTO  RoomDetails VALUES (13,'Python (ODC 1)','PB')
+   INSERT INTO  RoomDetails VALUES (14,'Java (ODC 2)','PB')
+   INSERT INTO  RoomDetails VALUES (15,'C++ (ODC 3)','PB')
+   INSERT INTO  RoomDetails VALUES (16,'PHP (ODC 6)','PB' )
+    INSERT INTO  RoomDetails VALUES (17,'Node','PB')
+   INSERT INTO  RoomDetails VALUES (18,'Summer','PB')
+   INSERT INTO  RoomDetails VALUES (19,'Occam (ODC 8)','PB')
+   INSERT INTO  RoomDetails VALUES (20,'Golang (ODC 9)','PB')
+   INSERT INTO  RoomDetails VALUES (21,'Kubernetts','PB')
+   INSERT INTO  RoomDetails VALUES (22,'SQL','PB' )
+   INSERT INTO  RoomDetails VALUES (23,'Solidity','PB')
+   INSERT INTO  RoomDetails VALUES (24,'Android','PB' )
+
+   select * from RoomDetails
+
+   Update  BookingDetails SET  To_Time= '14:00:00'    
+Insert Into BookingDetails VALUES (1,'Andromeda','2022-08-23','12:00:00','2:00:00','CHC Team','Workshop')

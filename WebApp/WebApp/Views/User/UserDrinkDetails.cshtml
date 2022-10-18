@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebApp.ChaatsModel.Drink>
+
+@{
+    ViewData["Title"] = "UserDrinkDetails";
+    Layout = "UserLayout";
+
+}
+
+<h1>UserDrinkDetails</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Dname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dprice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dprice)
+                </td>
+                <td>
+                    <a asp-controller="User" asp-action="Buy">>Buy Now!</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

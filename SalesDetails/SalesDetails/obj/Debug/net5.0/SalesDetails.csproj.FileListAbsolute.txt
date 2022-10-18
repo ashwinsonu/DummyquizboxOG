@@ -1,0 +1,16 @@
+D:\data\SalesDetails\SalesDetails\obj\Debug\net5.0\SalesDetails.csproj.AssemblyReference.cache
+D:\data\SalesDetails\SalesDetails\obj\Debug\net5.0\SalesDetails.GeneratedMSBuildEditorConfig.editorconfig
+D:\data\SalesDetails\SalesDetails\obj\Debug\net5.0\SalesDetails.AssemblyInfoInputs.cache
+D:\data\SalesDetails\SalesDetails\obj\Debug\net5.0\SalesDetails.AssemblyInfo.cs
+D:\data\SalesDetails\SalesDetails\obj\Debug\net5.0\SalesDetails.csproj.CoreCompileInputs.cache
+D:\data\SalesDetails\SalesDetails\bin\Debug\net5.0\SalesDetails.exe
+D:\data\SalesDetails\SalesDetails\bin\Debug\net5.0\SalesDetails.deps.json
+D:\data\SalesDetails\SalesDetails\bin\Debug\net5.0\SalesDetails.runtimeconfig.json
+D:\data\SalesDetails\SalesDetails\bin\Debug\net5.0\SalesDetails.runtimeconfig.dev.json
+D:\data\SalesDetails\SalesDetails\bin\Debug\net5.0\SalesDetails.dll
+D:\data\SalesDetails\SalesDetails\bin\Debug\net5.0\ref\SalesDetails.dll
+D:\data\SalesDetails\SalesDetails\bin\Debug\net5.0\SalesDetails.pdb
+D:\data\SalesDetails\SalesDetails\obj\Debug\net5.0\SalesDetails.dll
+D:\data\SalesDetails\SalesDetails\obj\Debug\net5.0\ref\SalesDetails.dll
+D:\data\SalesDetails\SalesDetails\obj\Debug\net5.0\SalesDetails.pdb
+D:\data\SalesDetails\SalesDetails\obj\Debug\net5.0\SalesDetails.genruntimeconfig.cache

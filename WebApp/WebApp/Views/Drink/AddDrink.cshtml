@@ -1,0 +1,60 @@
+﻿@model WebApp.ChaatsModel.Drink
+
+@{
+    ViewData["Title"] = "AddDrink";
+}
+
+<style>
+
+    .blax {
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-width: 100%;
+        margin-top: -40px;
+        position: absolute;
+        left: -50%;
+        right: -50%;
+        margin: auto;
+        top: 10%;
+    }
+</style>
+
+<div class="container">
+    <img src="~/image/drink.jpg" class="blax" />
+    <div class="row">
+        <div class="col-md-4">
+
+            <h1>Add a new Drink</h1>
+            <form asp-action="AddDrink">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Did" class="control-label"></label>
+                    <input asp-for="Did" class="form-control" />
+                    <span asp-validation-for="Did" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Dname" class="control-label"></label>
+                    <input asp-for="Dname" class="form-control" />
+                    <span asp-validation-for="Dname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Dprice" class="control-label"></label>
+                    <input asp-for="Dprice" class="form-control" />
+                    <span asp-validation-for="Dprice" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add Drink " class="btn btn-primary" />
+                </div>
+            </form>
+            <div>
+                <a asp-action="DrinkDetails" class="text-dark">Back to Drinks Menu</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

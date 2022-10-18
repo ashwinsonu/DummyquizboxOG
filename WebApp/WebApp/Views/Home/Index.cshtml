@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "welcomeLayout";
+}
+
+<style>
+
+    .blax {
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-width: 100%;
+        margin-top: -40px;
+        position: absolute;
+        left: -50%;
+        right: -50%;
+        margin: auto;
+        top: 10%;
+    }
+    fl {
+        width: 50%;
+        height: 30%;
+    }
+    fr {
+        width: 50%;
+        height:30%;
+    }
+
+</style>
+
+<div class="container-sm p-3 my-3  text-center text-primary">
+    <h1>Welcome to GharKaKhaana</h1>
+
+    <p>Welcome to  GharKaKhaana, where our specialty is delicious food created with the ingenuity and passion inspired by the fantastic flavors of India itself. We take great pride in improving upon your favorite Indian dishes in new and creative ways. Come and experience cooking our way!</p>
+    <div>
+        <a asp-controller="Login" asp-action="Login">Login as Admin </a>
+    </div>
+    
+    <div>
+        <a asp-controller="ULogin" asp-action="ULogin">Login as User </a>
+    </div>
+   
+
+    <img src="~/image/chaat.jpg" class="mx-auto d-block" style="width:50%" />
+
+
+
+</div>

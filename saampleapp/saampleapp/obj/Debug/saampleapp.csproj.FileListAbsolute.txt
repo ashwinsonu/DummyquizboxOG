@@ -1,0 +1,7 @@
+D:\data\saampleapp\saampleapp\bin\Debug\saampleapp.exe.config
+D:\data\saampleapp\saampleapp\bin\Debug\saampleapp.exe
+D:\data\saampleapp\saampleapp\bin\Debug\saampleapp.pdb
+D:\data\saampleapp\saampleapp\obj\Debug\saampleapp.csproj.AssemblyReference.cache
+D:\data\saampleapp\saampleapp\obj\Debug\saampleapp.csproj.CoreCompileInputs.cache
+D:\data\saampleapp\saampleapp\obj\Debug\saampleapp.exe
+D:\data\saampleapp\saampleapp\obj\Debug\saampleapp.pdb

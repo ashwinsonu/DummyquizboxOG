@@ -1,0 +1,58 @@
+﻿@model IEnumerable<WebApp.ChaatsModel.Drink>
+
+@{
+    ViewData["Title"] = "DrinkDetails";
+}
+
+<style>
+    h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h3 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+</style>
+
+<h1>Drinks Menu</h1>
+<h3> hello @ViewBag.Username</h3>
+
+<p>
+    <a asp-action="AddDrink">Add a new Drink</a>
+</p>
+<table  class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Did)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dprice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Did)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dprice)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Did">Update Item</a> |
+             
+                <a asp-action="Delete" asp-route-id="@item.Did">Cancel Item</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+https://aka.ms/azpipelines-parallelism-request
+
+
+https://www.altexsoft.com/blog/event-driven-architecture-pub-sub/
+https://github.com/SnthoshBala/SampleAngular10:43
+https://github.com/SnthoshBala/FirstAPI
+
+npm install --save-dev @angular-devkit/build-angular
+ 
+        <button type="button" class="btn btn-outline-primary btn-lg mt-5 ml-5" (click)="put_api(item.cid)">PUT</button>
+                <button type="button" class="btn btn-outline-primary btn-lg mt-5 ml-5" (click)="put_api(item.cid)">PUT</button>
+<button type="button" class="btn btn-outline-primary btn-lg mt-5 ml-5" (click)="post_api()">PosT</button>
+ <div>
+        <h1>Put Chaats</h1><br>
+        <form #PutChaatsForm="ngForm" (ngSubmit)="put_api(PutChaatsForm.value,chat.cid)">
+            <label for="id">Id</label>
+            <input type="number" id="id" name="cid" [(ngModel)]="chat.cid"><br>
+            <label for="Name">Name</label><br>
+            <input type="text" id="Name" name="cname" [(ngModel)]="chat.cname"><br>
+            <label for="Age">Price/label><br>
+            <input type="number" id="Price" name="cprice" [(ngModel)]="chat.cprice"><br>
+            <label for="Name">Name</label><br>
+            <input type="text" id="Name" name="name" [(ngModel)]="chat.cprice"><br>
+            <input type="submit" value="submit">
+       
+    
+
+    

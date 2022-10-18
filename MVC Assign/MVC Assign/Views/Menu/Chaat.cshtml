@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MVC_Assign.Models.Chaat>
+
+@{
+    ViewData["Title"] = "Chaat";
+}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+    th, td, p {
+        font-size: xx-large;
+    }
+
+    body {
+        background-color: turquoise;
+
+    }
+
+    h1 {
+        color: lightyellow;
+    }
+</style>
+<body>
+    <div class="container  ">
+
+        <h1>Chaat</h1>
+
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+        <table class="table table-dark table-hover blax">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cimage)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cname)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cprice)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <img src="@Url.Content(item.Cimage)" height="200" width="200" />
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cname)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cprice)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Cid }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Cid }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Cid })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

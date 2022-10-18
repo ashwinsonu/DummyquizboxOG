@@ -1,0 +1,40 @@
+﻿@model WebApp.ChaatsModel.UserLogin
+
+@{
+    ViewData["Title"] = "ULogin";
+    Layout = "UserLayout";
+}
+
+<h1>ULogin</h1>
+
+<h4>UserLogin</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ULogin">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" asp-controller="User" asp-action="User" value="Create" class="btn btn-primary" />
+            </div>
+            <div>
+                <a asp-controller="ULogin" asp-action="UCreate">Register as User </a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

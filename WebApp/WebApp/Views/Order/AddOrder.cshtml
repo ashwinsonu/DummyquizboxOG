@@ -1,0 +1,58 @@
+﻿@model WebApp.ChaatsModel.Order
+
+@{
+    ViewData["Title"] = "AddOrder";
+}
+<style>
+
+    .blax {
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-width: 100%;
+        margin-top: -40px;
+        position: absolute;
+        left: -50%;
+        right: -50%;
+        margin: auto;
+        top: 10%;
+    }
+</style>
+
+<div class="container">
+    <img src="~/image/order.jpg" class="blax" />
+
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <h1 >Place Your Order</h1>
+            <form asp-action="AddOrder">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Id" class="control-label"></label>
+                    <input asp-for="Id" class="form-control" />
+                    <span asp-validation-for="Item" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Item" class="control-label"></label>
+                    <input asp-for="Item" class="form-control" />
+                    <span asp-validation-for="Item" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Toa" class="control-label"></label>
+                    <input asp-for="Toa" class="form-control" />
+                    <span asp-validation-for="Toa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="AddOrder" class="btn btn-primary" />
+                </div>
+            </form>
+            <div>
+                <a asp-action="OrderDetails">Back to Order List</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

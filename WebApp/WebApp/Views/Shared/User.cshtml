@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "UserLayout";
+}
+
+<div class="container">
+    <div class="card-group">
+      
+       
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="~/image/dahi-puri.jpg" alt="Card image" width="460" height="345">
+            <div class="card-body">
+                <h4 class="card-title">Chaats</h4>
+                <p class="card-text">Turn your frown upside down with the help of our magic</p>
+                <a  asp-controller="User" asp-action="UserChaatDetails"  class="btn btn-primary">See Profile</a>
+            </div>
+        </div>
+        <br>
+
+        
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="~/image/drink.jpg" alt="Card image" width="460" height="345">
+            <div class="card-body">
+                <h4 class="card-title">Drinks</h4>
+                <p class="card-text">Beat the heat with something cool</p>
+                <a  asp-controller="User" asp-action="UserDrinkDetails" class="btn btn-primary">See Profile</a>
+            </div>
+
+        </div>
+    </div>
+</div>

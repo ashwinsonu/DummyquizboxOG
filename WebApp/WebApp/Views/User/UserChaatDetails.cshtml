@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WebApp.ChaatsModel.Chaat>
+
+@{
+    ViewData["Title"] = "UserChaatDetails";
+    Layout = "UserLayout";
+}
+
+<h1>UserChaatDetails</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cprice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cprice)
+            </td>
+            <td>
+                <a asp-controller="User" asp-action="Buy">>Buy Now!</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

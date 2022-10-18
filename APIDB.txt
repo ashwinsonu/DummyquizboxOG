@@ -1,0 +1,32 @@
+use chaats;
+CREATE TABLE Chaats (
+    CId Int PRIMARY KEY ,   
+	CName varchar(20),
+	 CImage nvarchar(20),
+    CPrice float
+    
+);
+
+INSERT INTO Chaats VALUES(1,'PAANI PURI','\Images\panipuri.jpg',30)
+INSERT INTO Chaats VALUES(2,'DAHI PURI','\Images\dahipuri.jpg',40)
+INSERT INTO Chaats VALUES(3,'SEV PURI','\Images\chaats.jpg',50)
+INSERT INTO Chaats VALUES(4,'BHEL PURI','\Images\bhelpuri.jpg',50)
+INSERT INTO Chaats VALUES(5,'VADA PAV','\Images\vadapav.jpg',20)
+
+INSERT INTO Chaats VALUES(6,'RAGDA TIKKI','\Images\ragda.jpg',60)
+   SELECT * FROM Chaats
+drop table Chaats
+
+CREATE TABLE Drinks (
+    DId Int PRIMARY KEY,
+    DName varchar(20),
+	DImage nvarchar(20),
+    Dprice Float,
+   
+);
+INSERT INTO Drinks VALUES(1,'TEA','\Images\tea.jfif',10)
+INSERT INTO Drinks VALUES(2,'COFFEE','\Images\coffee.jpg',20)
+INSERT INTO Drinks VALUES(3,'LASSI','\Images\Lassi.jpg',40)
+INSERT INTO Drinks VALUES(4,'Virgin Mojito','\Images\mojito.jpg',50)
+   SELECT * FROM Drinks
+DROP TABLE Drinks 

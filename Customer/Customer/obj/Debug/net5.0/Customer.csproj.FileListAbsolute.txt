@@ -1,0 +1,16 @@
+D:\data\assignment\Customer\Customer\bin\Debug\net5.0\Customer.exe
+D:\data\assignment\Customer\Customer\bin\Debug\net5.0\Customer.deps.json
+D:\data\assignment\Customer\Customer\bin\Debug\net5.0\Customer.runtimeconfig.json
+D:\data\assignment\Customer\Customer\bin\Debug\net5.0\Customer.runtimeconfig.dev.json
+D:\data\assignment\Customer\Customer\bin\Debug\net5.0\Customer.dll
+D:\data\assignment\Customer\Customer\bin\Debug\net5.0\ref\Customer.dll
+D:\data\assignment\Customer\Customer\bin\Debug\net5.0\Customer.pdb
+D:\data\assignment\Customer\Customer\obj\Debug\net5.0\Customer.csproj.AssemblyReference.cache
+D:\data\assignment\Customer\Customer\obj\Debug\net5.0\Customer.GeneratedMSBuildEditorConfig.editorconfig
+D:\data\assignment\Customer\Customer\obj\Debug\net5.0\Customer.AssemblyInfoInputs.cache
+D:\data\assignment\Customer\Customer\obj\Debug\net5.0\Customer.AssemblyInfo.cs
+D:\data\assignment\Customer\Customer\obj\Debug\net5.0\Customer.csproj.CoreCompileInputs.cache
+D:\data\assignment\Customer\Customer\obj\Debug\net5.0\Customer.dll
+D:\data\assignment\Customer\Customer\obj\Debug\net5.0\ref\Customer.dll
+D:\data\assignment\Customer\Customer\obj\Debug\net5.0\Customer.pdb
+D:\data\assignment\Customer\Customer\obj\Debug\net5.0\Customer.genruntimeconfig.cache

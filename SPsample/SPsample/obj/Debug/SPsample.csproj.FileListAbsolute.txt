@@ -1,0 +1,10 @@
+D:\data\SPsample\SPsample\obj\Debug\SPsample.csproj.AssemblyReference.cache
+D:\data\SPsample\SPsample\obj\Debug\SPsample.csproj.CoreCompileInputs.cache
+D:\data\SPsample\SPsample\bin\Debug\SPsample.exe.config
+D:\data\SPsample\SPsample\bin\Debug\SPsample.exe
+D:\data\SPsample\SPsample\bin\Debug\SPsample.pdb
+D:\data\SPsample\SPsample\bin\Debug\System.Data.SqlClient.dll
+D:\data\SPsample\SPsample\bin\Debug\System.Data.SqlClient.xml
+D:\data\SPsample\SPsample\obj\Debug\SPsample.csproj.CopyComplete
+D:\data\SPsample\SPsample\obj\Debug\SPsample.exe
+D:\data\SPsample\SPsample\obj\Debug\SPsample.pdb

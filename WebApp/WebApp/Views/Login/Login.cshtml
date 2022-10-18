@@ -1,0 +1,48 @@
+﻿@model WebApp.ChaatsModel.Logintbl
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="jumbotron p-xl-2 shadow-lg ">
+    <div class="container">
+
+        <h1 class="text-center p-4">Login</h1>
+
+        <div class="row justify-content-center" >
+
+            <div class="col-md-4">
+                <form asp-action="Login">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Username" class="control-label"></label>
+                        <input asp-for="Username" class="form-control" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" type="password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn btn-primary" />
+                    </div>
+                    <div>
+                        <a asp-controller="Login" asp-action="Create">New Admin </a>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
